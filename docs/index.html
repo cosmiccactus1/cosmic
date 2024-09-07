@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>VN Consult - Profesionalne Usluge</title>
+    <title>Agencija za zapošljavanje stranaca u BiH</title>
     <style>
         * {
             margin: 0;
@@ -21,9 +21,9 @@
             overflow: hidden;
         }
         header {
-            background: #ffffff;
+            background: #0056b3;
+            color: #fff;
             padding: 1rem 0;
-            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
         }
         header .logo {
             float: left;
@@ -41,14 +41,22 @@
             margin-left: 20px;
         }
         header nav ul li a {
+            color: #fff;
             text-decoration: none;
-            color: #333;
-            font-weight: bold;
         }
         .hero {
-            background: #f4f4f4;
+            background: url('https://source.unsplash.com/random/1600x800/?office') no-repeat center center/cover;
+            height: 60vh;
+            color: #fff;
             text-align: center;
-            padding: 4rem 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .hero-content {
+            background: rgba(0, 0, 0, 0.7);
+            padding: 2rem;
+            border-radius: 15px;
         }
         .hero h1 {
             font-size: 2.5rem;
@@ -56,22 +64,32 @@
         }
         .btn {
             display: inline-block;
-            background: #007bff;
+            background: #0056b3;
             color: #fff;
             padding: 0.5rem 1rem;
             text-decoration: none;
             border-radius: 5px;
+            margin-top: 1rem;
         }
-        .services {
+        .services, .why-us {
             padding: 3rem 0;
         }
-        .services h2 {
+        .services h2, .why-us h2 {
             text-align: center;
             margin-bottom: 2rem;
         }
         .service-item {
+            background: #f4f4f4;
             text-align: center;
-            margin-bottom: 2rem;
+            margin-bottom: 1rem;
+            padding: 1rem;
+            border-radius: 5px;
+        }
+        .cta {
+            background: #0056b3;
+            color: #fff;
+            text-align: center;
+            padding: 3rem 0;
         }
         footer {
             background: #333;
@@ -84,47 +102,62 @@
 <body>
     <header>
         <div class="container">
-            <div class="logo">VN Consult</div>
+            <div class="logo">AgencijaZaPosao BiH</div>
             <nav>
                 <ul>
                     <li><a href="#home">Početna</a></li>
                     <li><a href="#services">Usluge</a></li>
-                    <li><a href="#about">O nama</a></li>
+                    <li><a href="#why-us">Zašto mi</a></li>
                     <li><a href="#contact">Kontakt</a></li>
                 </ul>
             </nav>
         </div>
     </header>
 
-    <section class="hero">
-        <div class="container">
-            <h1>Profesionalne Poslovne Usluge</h1>
-            <p>Pružamo vrhunske konsultantske usluge za unapređenje vašeg poslovanja</p>
-            <a href="#contact" class="btn">Kontaktirajte nas</a>
+    <section class="hero" id="home">
+        <div class="hero-content">
+            <h1>Vaš pouzdani partner za zapošljavanje stranaca u Bosni i Hercegovini</h1>
+            <p>Otključajte potencijal međunarodnog talenta u srcu Balkana</p>
+            <a href="#contact" class="btn">Saznajte više</a>
         </div>
     </section>
 
     <section class="services" id="services">
         <div class="container">
-            <h2>Naše Usluge</h2>
+            <h2>Naše usluge</h2>
             <div class="service-item">
-                <h3>Poslovno Savjetovanje</h3>
-                <p>Stručni savjeti za optimizaciju vašeg poslovanja</p>
+                <h3>Regrutacija i selekcija</h3>
+                <p>Pronalazimo najbolje međunarodne talente koji odgovaraju vašim poslovnim potrebama.</p>
             </div>
             <div class="service-item">
-                <h3>Financijska Analiza</h3>
-                <p>Detaljni uvid u financijsko stanje vašeg poduzeća</p>
+                <h3>Pravna podrška</h3>
+                <p>Vodimo vas kroz kompleksne procedure radnih dozvola i viza, osiguravajući potpunu usklađenost sa zakonima BiH.</p>
             </div>
             <div class="service-item">
-                <h3>Strateško Planiranje</h3>
-                <p>Razvoj dugoročnih strategija za rast i uspjeh</p>
+                <h3>Integracija i obuka</h3>
+                <p>Pomažemo stranim radnicima da se uspješno prilagode novom radnom okruženju i kulturi.</p>
             </div>
+        </div>
+    </section>
+
+    <section class="why-us" id="why-us">
+        <div class="container">
+            <h2>Zašto odabrati nas</h2>
+            <p>S našim dubinskim poznavanjem lokalnih zakona i procedura, mrežom kontakata i posvećenošću izvrsnosti, mi smo vaš idealni partner za navigaciju kroz izazove zapošljavanja stranaca u BiH. Bilo da ste poslodavac u potrazi za međunarodnim talentom ili strani radnik koji želi graditi karijeru u Bosni i Hercegovini, mi smo tu da osiguramo vaš uspjeh.</p>
+        </div>
+    </section>
+
+    <section class="cta" id="contact">
+        <div class="container">
+            <h2>Započnite svoje putovanje međunarodnog zapošljavanja danas!</h2>
+            <p>Kontaktirajte nas za besplatnu konsultaciju.</p>
+            <a href="mailto:info@agencijazaposaobih.com" class="btn">Kontaktirajte nas</a>
         </div>
     </section>
 
     <footer>
         <div class="container">
-            <p>&copy; 2024 VN Consult. Sva prava zadržana.</p>
+            <p>&copy; 2024 AgencijaZaPosao BiH. Sva prava zadržana.</p>
         </div>
     </footer>
 </body>
