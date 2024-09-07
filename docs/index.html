@@ -3,14 +3,17 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Vaša Profesionalna Stranica</title>
+    <title>VN Consult - Profesionalne Usluge</title>
     <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
         body {
             font-family: 'Arial', sans-serif;
             line-height: 1.6;
-            margin: 0;
-            padding: 0;
-            background-color: #f4f4f4;
+            color: #333;
         }
         .container {
             width: 80%;
@@ -18,128 +21,111 @@
             overflow: hidden;
         }
         header {
-            background: #35424a;
-            color: #ffffff;
-            padding-top: 30px;
-            min-height: 70px;
-            border-bottom: #e8491d 3px solid;
+            background: #ffffff;
+            padding: 1rem 0;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
         }
-        header a {
-            color: #ffffff;
-            text-decoration: none;
-            text-transform: uppercase;
-            font-size: 16px;
-        }
-        header ul {
-            padding: 0;
-            margin: 0;
-            list-style: none;
-            overflow: hidden;
-        }
-        header li {
+        header .logo {
             float: left;
-            display: inline;
-            padding: 0 20px 0 20px;
-        }
-        header #branding {
-            float: left;
-        }
-        header #branding h1 {
-            margin: 0;
+            font-size: 1.5rem;
+            font-weight: bold;
         }
         header nav {
             float: right;
-            margin-top: 10px;
         }
-        header .highlight, header .current a {
-            color: #e8491d;
+        header nav ul {
+            list-style: none;
+        }
+        header nav ul li {
+            display: inline;
+            margin-left: 20px;
+        }
+        header nav ul li a {
+            text-decoration: none;
+            color: #333;
             font-weight: bold;
         }
-        header a:hover {
-            color: #cccccc;
-            font-weight: bold;
-        }
-        #showcase {
-            min-height: 400px;
-            background: url('https://source.unsplash.com/random/1600x900/?business') no-repeat center center/cover;
+        .hero {
+            background: #f4f4f4;
             text-align: center;
-            color: #ffffff;
+            padding: 4rem 0;
         }
-        #showcase h1 {
-            margin-top: 100px;
-            font-size: 55px;
-            margin-bottom: 10px;
+        .hero h1 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
         }
-        #showcase p {
-            font-size: 20px;
+        .btn {
+            display: inline-block;
+            background: #007bff;
+            color: #fff;
+            padding: 0.5rem 1rem;
+            text-decoration: none;
+            border-radius: 5px;
         }
-        #boxes {
-            margin-top: 20px;
+        .services {
+            padding: 3rem 0;
         }
-        #boxes .box {
-            float: left;
+        .services h2 {
             text-align: center;
-            width: 30%;
-            padding: 10px;
+            margin-bottom: 2rem;
         }
-        #boxes .box img {
-            width: 90px;
+        .service-item {
+            text-align: center;
+            margin-bottom: 2rem;
         }
         footer {
-            padding: 20px;
-            margin-top: 20px;
-            color: #ffffff;
-            background-color: #e8491d;
+            background: #333;
+            color: #fff;
             text-align: center;
+            padding: 1rem 0;
         }
     </style>
 </head>
 <body>
     <header>
         <div class="container">
-            <div id="branding">
-                <h1><span class="highlight">Vaše</span> Poslovanje</h1>
-            </div>
+            <div class="logo">VN Consult</div>
             <nav>
                 <ul>
-                    <li class="current"><a href="index.html">Početna</a></li>
-                    <li><a href="about.html">O nama</a></li>
-                    <li><a href="services.html">Usluge</a></li>
-                    <li><a href="contact.html">Kontakt</a></li>
+                    <li><a href="#home">Početna</a></li>
+                    <li><a href="#services">Usluge</a></li>
+                    <li><a href="#about">O nama</a></li>
+                    <li><a href="#contact">Kontakt</a></li>
                 </ul>
             </nav>
         </div>
     </header>
 
-    <section id="showcase">
+    <section class="hero">
         <div class="container">
-            <h1>Profesionalna Rješenja za Vaš Uspjeh</h1>
-            <p>Mi pružamo vrhunske usluge i stručno znanje za unapređenje vašeg poslovanja.</p>
+            <h1>Profesionalne Poslovne Usluge</h1>
+            <p>Pružamo vrhunske konsultantske usluge za unapređenje vašeg poslovanja</p>
+            <a href="#contact" class="btn">Kontaktirajte nas</a>
         </div>
     </section>
 
-    <section id="boxes">
+    <section class="services" id="services">
         <div class="container">
-            <div class="box">
-                <img src="https://source.unsplash.com/random/90x90/?chart" alt="Analiza">
-                <h3>Poslovna Analiza</h3>
-                <p>Detaljni uvid u vaše poslovanje za optimalne rezultate.</p>
+            <h2>Naše Usluge</h2>
+            <div class="service-item">
+                <h3>Poslovno Savjetovanje</h3>
+                <p>Stručni savjeti za optimizaciju vašeg poslovanja</p>
             </div>
-            <div class="box">
-                <img src="https://source.unsplash.com/random/90x90/?legal" alt="Pravni savjeti">
-                <h3>Pravni Savjeti</h3>
-                <p>Stručna pravna podrška za sigurno poslovanje.</p>
+            <div class="service-item">
+                <h3>Financijska Analiza</h3>
+                <p>Detaljni uvid u financijsko stanje vašeg poduzeća</p>
             </div>
-            <div class="box">
-                <img src="https://source.unsplash.com/random/90x90/?growth" alt="Strategija">
-                <h3>Strategija Rasta</h3>
-                <p>Planovi i strategije za dugoročni rast i uspjeh.</p>
+            <div class="service-item">
+                <h3>Strateško Planiranje</h3>
+                <p>Razvoj dugoročnih strategija za rast i uspjeh</p>
             </div>
         </div>
     </section>
 
     <footer>
-        <p>&copy; 2024 Vaše Poslovanje. Sva prava zadržana.</p>
+        <div class="container">
+            <p>&copy; 2024 VN Consult. Sva prava zadržana.</p>
+        </div>
     </footer>
 </body>
 </html>
