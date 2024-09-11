@@ -6,41 +6,154 @@
     <title>Work Horizon - Agencija za zapošljavanje stranaca u BiH</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
     <style>
-        /* Postojeći CSS ostaje isti */
-
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: 'Arial', sans-serif;
+            line-height: 1.6;
+            color: #333;
+        }
         .language-selector {
             background: #f4f4f4;
             padding: 5px 0;
             text-align: right;
         }
         .language-selector a {
-            margin-left: 10px;
+            margin-right: 10px;
             color: #333;
             text-decoration: none;
         }
-        .countries {
-            padding: 4rem 0;
-            background: #fff;
+        .top-bar {
+            background: #00356B;
+            color: #fff;
+            padding: 1rem 0;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
         }
-        .countries h2 {
+        .top-bar-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            width: 80%;
+            margin: auto;
+        }
+        .logo {
+            font-size: 2rem;
+            font-weight: bold;
+            color: #fff;
+        }
+        .collaboration-btn {
+            background: #FFA500;
+            color: #fff;
+            padding: 0.5rem 1rem;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background 0.3s ease;
+            font-weight: bold;
+        }
+        .collaboration-btn:hover {
+            background: #FF8C00;
+        }
+        .hero {
+            background: url('radnik.jpg') no-repeat center center/cover;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
             text-align: center;
+            padding: 0 20px;
+            color: #fff;
+        }
+        .hero-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.6);
+        }
+        .hero-content {
+            z-index: 10;
+        }
+        .hero h1 {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+        }
+        .hero h2 {
+            font-size: 2rem;
+            margin-bottom: 2rem;
+        }
+        .btn-container {
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+        }
+        .btn {
+            display: inline-block;
+            background: #FFA500;
+            color: #fff;
+            padding: 1rem 2rem;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background 0.3s ease;
+            font-weight: bold;
+        }
+        .btn:hover {
+            background: #FF8C00;
+        }
+        .motivation, .features, .about-us, .countries {
+            padding: 4rem 0;
+            text-align: center;
+        }
+        .motivation {
+            background: #f4f4f4;
+        }
+        .motivation p, .about-us p {
+            font-size: 1.5rem;
+            max-width: 800px;
+            margin: auto;
+            color: #00356B;
+        }
+        .features h2, .about-us h2, .countries h2 {
             font-size: 2.5rem;
             margin-bottom: 3rem;
             color: #00356B;
         }
-        .country-grid {
+        .feature-grid, .country-grid {
             display: grid;
-            grid-template-columns: repeat(3, 1fr);
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
             gap: 2rem;
             width: 80%;
             margin: auto;
         }
-        .country-item {
-            text-align: center;
+        .feature-item, .country-item {
+            background: #f9f9f9;
             padding: 2rem;
             border-radius: 10px;
+            text-align: center;
             transition: all 0.3s ease;
             box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+        .feature-item:hover, .country-item:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(0,0,0,0.2);
+        }
+        .feature-icon {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+            color: #00356B;
+        }
+        .feature-item h3, .country-item h3 {
+            margin-bottom: 1rem;
+            color: #00356B;
+        }
+        .about-us {
+            background: #e9ecef;
         }
         .country-item img {
             width: 100%;
@@ -49,9 +162,11 @@
             border-radius: 10px;
             margin-bottom: 1rem;
         }
-        .country-item h3 {
-            margin-bottom: 1rem;
-            color: #00356B;
+        footer {
+            background: #00356B;
+            color: #fff;
+            text-align: center;
+            padding: 2rem 0;
         }
     </style>
 </head>
@@ -62,7 +177,62 @@
         <a href="#" onclick="changeLanguage('de')">Deutsch</a>
     </div>
 
-    <!-- Ostatak HTML strukture ostaje isti do sekcije s zemljama -->
+    <div class="top-bar">
+        <div class="top-bar-content">
+            <div class="logo">WH</div>
+            <a href="saradnja.html" class="collaboration-btn">Započnimo saradnju</a>
+        </div>
+    </div>
+
+    <section class="hero">
+        <div class="hero-overlay"></div>
+        <div class="hero-content">
+            <h1>Work Horizon</h1>
+            <h2>Agencija za zapošljavanje stranaca u Bosni i Hercegovini</h2>
+            <div class="btn-container">
+                <a href="trazim-poslodavca.html" class="btn">Tražim poslodavca</a>
+                <a href="trazim-radnika.html" class="btn">Tražim radnika</a>
+            </div>
+        </div>
+    </section>
+
+    <section class="motivation">
+        <p>"Povezujemo ambicije sa prilikama, gradeći mostove između kultura i stvarajući uspješne poslovne priče. Zajedno, otključavamo potencijal i oblikujemo budućnost rada u BiH."</p>
+    </section>
+
+    <section class="features">
+        <h2>Naše Karakteristike</h2>
+        <div class="feature-grid">
+            <div class="feature-item">
+                <div class="feature-icon">
+                    <i class="fas fa-cogs"></i>
+                </div>
+                <h3>Sveobuhvatna administrativna podrška</h3>
+                <p>Pružamo potpunu administrativnu podršku, od pripreme dokumentacije do završetka procesa zapošljavanja.</p>
+            </div>
+            <div class="feature-item">
+                <div class="feature-icon">
+                    <i class="fas fa-search"></i>
+                </div>
+                <h3>Regrutacija stručnih radnika</h3>
+                <p>Naš stručni tim pronalazi i odabire kvalificirane kandidate iz različitih branši koji odgovaraju vašim specifičnim potrebama.</p>
+            </div>
+            <div class="feature-item">
+                <div class="feature-icon">
+                    <i class="fas fa-puzzle-piece"></i>
+                </div>
+                <h3>Prilagođena rješenja</h3>
+                <p>Kreiramo personalizirana rješenja za zapošljavanje koja odgovaraju jedinstvenim zahtjevima vašeg poslovanja.</p>
+            </div>
+            <div class="feature-item">
+                <div class="feature-icon">
+                    <i class="fas fa-globe"></i>
+                </div>
+                <h3>Međunarodno umrežavanje</h3>
+                <p>Naša široka mreža kontakata omogućava nam pristup stručnim radnicima iz cijelog svijeta, pokrivajući razne industrije i zanimanja.</p>
+            </div>
+        </div>
+    </section>
 
     <section class="countries">
         <h2>Naši partneri</h2>
@@ -85,7 +255,15 @@
         </div>
     </section>
 
-    <!-- Footer ostaje isti -->
+    <section class="about-us">
+        <h2>O nama</h2>
+        <p>Work Horizon je vodeća agencija za zapošljavanje stranaca u Bosni i Hercegovini. Naša misija je povezati talentirane stručnjake iz cijelog svijeta s vodećim kompanijama u BiH, potičući rast i inovacije. S dugogodišnjim iskustvom i predanošću izvrsnosti, osiguravamo besprijekoran proces zapošljavanja za obje strane.</p>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 Work Horizon. Sva prava zadržana.</p>
+        <p>Adresa: Glavna ulica 123, Sarajevo, BiH | Email: info@workhorizon.ba | Tel: +387 33 123 456</p>
+    </footer>
 
     <script>
         function changeLanguage(lang) {
@@ -93,7 +271,15 @@
             console.log('Promjena jezika na: ' + lang);
         }
 
-        // Postojeći JavaScript za smooth scrolling ostaje isti
+        // Smooth scrolling
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
     </script>
 </body>
 </html>
