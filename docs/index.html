@@ -102,7 +102,117 @@
                 transform: translateY(0);
             }
         }
-        /* Остатак CSS-а остаје исти */
+        .btn {
+            display: inline-block;
+            background: #FFA500;
+            color: #fff;
+            padding: 0.8rem 1.5rem;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background 0.3s ease;
+        }
+        .btn:hover {
+            background: #FF8C00;
+        }
+        section {
+            padding: 5rem 0;
+        }
+        .section-title {
+            text-align: center;
+            font-size: 2.5rem;
+            margin-bottom: 3rem;
+            color: #00356B;
+        }
+        .characteristics {
+            background: #f9f9f9;
+        }
+        .char-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+        }
+        .char-item {
+            background: #fff;
+            padding: 2rem;
+            border-radius: 10px;
+            text-align: center;
+            transition: all 0.3s ease;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+        .char-item:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(0,0,0,0.2);
+        }
+        .char-icon {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+            color: #00356B;
+        }
+        .char-item h3 {
+            margin-bottom: 1rem;
+            color: #00356B;
+        }
+        .about-us {
+            background: #fff;
+        }
+        .about-content {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            flex-wrap: wrap;
+        }
+        .about-text {
+            flex: 1;
+            padding-right: 2rem;
+            min-width: 300px;
+        }
+        .about-image {
+            flex: 1;
+            text-align: center;
+            min-width: 300px;
+        }
+        .about-image img {
+            max-width: 400px;
+            border-radius: 50%;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+            transition: transform 0.3s ease;
+        }
+        .about-image img:hover {
+            transform: scale(1.05);
+        }
+        .contact {
+            background: #00356B;
+            color: #fff;
+        }
+        .contact-form {
+            max-width: 600px;
+            margin: 0 auto;
+            background: #fff;
+            padding: 2rem;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+        .form-group {
+            margin-bottom: 1rem;
+        }
+        .form-group label {
+            display: block;
+            margin-bottom: 0.5rem;
+            color: #00356B;
+        }
+        .form-group input,
+        .form-group textarea {
+            width: 100%;
+            padding: 0.5rem;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+        footer {
+            background: #333;
+            color: #fff;
+            text-align: center;
+            padding: 1rem 0;
+        }
     </style>
 </head>
 <body>
@@ -112,7 +222,7 @@
             <nav>
                 <ul>
                     <li><a href="#home">Početna</a></li>
-                    <li><a href="#features">Usluge</a></li>
+                    <li><a href="#characteristics">Karakteristike</a></li>
                     <li><a href="#about">O nama</a></li>
                     <li><a href="#contact">Kontakt</a></li>
                 </ul>
@@ -130,7 +240,89 @@
         </div>
     </section>
 
-    <!-- Остатак HTML-а остаје исти -->
+    <section class="characteristics" id="characteristics">
+        <div class="container">
+            <h2 class="section-title">Naše Karakteristike</h2>
+            <div class="char-grid">
+                <div class="char-item">
+                    <div class="char-icon">
+                        <i class="fas fa-cogs"></i>
+                    </div>
+                    <h3>Sveobuhvatna administrativna podrška</h3>
+                    <p>Pružamo potpunu administrativnu podršku, od pripreme dokumentacije do završetka procesa zapošljavanja.</p>
+                </div>
+                <div class="char-item">
+                    <div class="char-icon">
+                        <i class="fas fa-search"></i>
+                    </div>
+                    <h3>Pronalazak kvalificirane radne snage</h3>
+                    <p>Naš stručni tim pronalazi i odabire najbolje kandidate koji odgovaraju vašim specifičnim potrebama.</p>
+                </div>
+                <div class="char-item">
+                    <div class="char-icon">
+                        <i class="fas fa-puzzle-piece"></i>
+                    </div>
+                    <h3>Prilagođena rješenja</h3>
+                    <p>Kreiramo personalizirana rješenja za zapošljavanje koja odgovaraju jedinstvenim zahtjevima vašeg poslovanja.</p>
+                </div>
+                <div class="char-item">
+                    <div class="char-icon">
+                        <i class="fas fa-globe"></i>
+                    </div>
+                    <h3>Međunarodno umrežavanje</h3>
+                    <p>Naša široka mreža kontakata omogućava nam pristup talentima iz cijelog svijeta.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="about-us" id="about">
+        <div class="container">
+            <h2 class="section-title">O nama</h2>
+            <div class="about-content">
+                <div class="about-text">
+                    <p>Work Horizon je vodeća agencija za zapošljavanje stranaca u Bosni i Hercegovini. S dugogodišnjim iskustvom i stručnošću, posvećeni smo povezivanju međunarodnih talenata s najboljim poslovnim prilikama u BiH.</p>
+                    <p>Naš tim iskusnih profesionalaca pruža sveobuhvatnu podršku kako poslodavcima tako i stranim radnicima, osiguravajući glatku integraciju i dugoročni uspjeh. Vjerujemo u stvaranje mostova između kultura i izgradnju snažne, raznolike radne snage u BiH.</p>
+                </div>
+                <div class="about-image">
+                    <img src="tim.jpg" alt="Naš tim" />
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="contact" id="contact">
+        <div class="container">
+            <h2 class="section-title">Kontaktirajte nas</h2>
+            <div class="contact-form">
+                <form action="#" method="POST">
+                    <div class="form-group">
+                        <label for="name">Ime:</label>
+                        <input type="text" id="name" name="name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="surname">Prezime:</label>
+                        <input type="text" id="surname" name="surname" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email:</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="message">Vaše pitanje:</label>
+                        <textarea id="message" name="message" rows="5" required></textarea>
+                    </div>
+                    <button type="submit" class="btn">Pošalji</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 Work Horizon. Sva prava zadržana.</p>
+        </div>
+    </footer>
 
     <script>
         // Smooth scrolling
