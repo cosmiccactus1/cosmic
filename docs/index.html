@@ -32,10 +32,22 @@
             width: 80%;
             margin: auto;
         }
-        .top-bar a {
-            color: #fff;
-            text-decoration: none;
+        .logo {
+            font-size: 2rem;
             font-weight: bold;
+            color: #fff;
+        }
+        .collaboration-btn {
+            background: #FFA500;
+            color: #fff;
+            padding: 0.5rem 1rem;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background 0.3s ease;
+            font-weight: bold;
+        }
+        .collaboration-btn:hover {
+            background: #FF8C00;
         }
         .hero {
             background: url('radnik.jpg') no-repeat center center/cover;
@@ -85,23 +97,20 @@
         .btn:hover {
             background: #FF8C00;
         }
-        .motivation {
+        .motivation, .features, .about-us {
+            padding: 4rem 0;
             text-align: center;
-            padding: 3rem 0;
+        }
+        .motivation {
             background: #f4f4f4;
         }
-        .motivation p {
+        .motivation p, .about-us p {
             font-size: 1.5rem;
             max-width: 800px;
             margin: auto;
             color: #00356B;
         }
-        .features {
-            padding: 4rem 0;
-            background: #fff;
-        }
-        .features h2 {
-            text-align: center;
+        .features h2, .about-us h2 {
             font-size: 2.5rem;
             margin-bottom: 3rem;
             color: #00356B;
@@ -134,13 +143,46 @@
             margin-bottom: 1rem;
             color: #00356B;
         }
+        .about-us {
+            background: #e9ecef;
+        }
+        .testimonials {
+            background: #fff;
+            padding: 4rem 0;
+            text-align: center;
+        }
+        .testimonial-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            width: 80%;
+            margin: auto;
+        }
+        .testimonial-item {
+            background: #f9f9f9;
+            padding: 2rem;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+        .testimonial-item img {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            margin-bottom: 1rem;
+        }
+        footer {
+            background: #00356B;
+            color: #fff;
+            text-align: center;
+            padding: 2rem 0;
+        }
     </style>
 </head>
 <body>
     <div class="top-bar">
         <div class="top-bar-content">
-            <a href="saradnja.html">Započnimo saradnju</a>
-            <div>Work Horizon</div>
+            <div class="logo">WH</div>
+            <a href="saradnja.html" class="collaboration-btn">Započnimo saradnju</a>
         </div>
     </div>
 
@@ -193,6 +235,32 @@
             </div>
         </div>
     </section>
+
+    <section class="about-us">
+        <h2>O nama</h2>
+        <p>Work Horizon je vodeća agencija za zapošljavanje stranaca u Bosni i Hercegovini. Naša misija je povezati talentirane stručnjake iz cijelog svijeta s vodećim kompanijama u BiH, potičući rast i inovacije. S dugogodišnjim iskustvom i predanošću izvrsnosti, osiguravamo besprijekoran proces zapošljavanja za obje strane.</p>
+    </section>
+
+    <section class="testimonials">
+        <h2>Što kažu naši klijenti</h2>
+        <div class="testimonial-grid">
+            <div class="testimonial-item">
+                <img src="https://randomuser.me/api/portraits/men/1.jpg" alt="Klijent 1">
+                <p>"Work Horizon nam je pomogao pronaći izvrsne stručnjake koji su transformirali naše poslovanje. Njihova podrška je bila neprocjenjiva."</p>
+                <h4>Adnan H., IT kompanija</h4>
+            </div>
+            <div class="testimonial-item">
+                <img src="https://randomuser.me/api/portraits/women/1.jpg" alt="Klijent 2">
+                <p>"Kao strani radnik, osjećala sam se sigurno i podržano tijekom cijelog procesa. Work Horizon je bio uz mene na svakom koraku."</p>
+                <h4>Maria S., Inženjer</h4>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 Work Horizon. Sva prava zadržana.</p>
+        <p>Adresa: Glavna ulica 123, Sarajevo, BiH | Email: info@workhorizon.ba | Tel: +387 33 123 456</p>
+    </footer>
 
     <script>
         // Smooth scrolling
