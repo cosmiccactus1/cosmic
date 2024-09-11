@@ -18,13 +18,15 @@
         }
         .language-selector {
             background: #f4f4f4;
-            padding: 5px 0;
+            padding: 10px 0;
             text-align: right;
         }
         .language-selector a {
-            margin-right: 10px;
+            margin-right: 15px;
             color: #333;
             text-decoration: none;
+            font-family: 'Helvetica', sans-serif;
+            font-weight: bold;
         }
         .top-bar {
             background: #00356B;
@@ -68,24 +70,27 @@
             text-align: center;
             padding: 0 20px;
             color: #fff;
+            position: relative;
         }
-        .hero-overlay {
+        .hero::before {
+            content: '';
             position: absolute;
             top: 0;
             left: 0;
             width: 100%;
             height: 100%;
-            background: rgba(0, 0, 0, 0.6);
+            background: rgba(0, 0, 0, 0.5);
         }
         .hero-content {
+            position: relative;
             z-index: 10;
         }
         .hero h1 {
-            font-size: 3rem;
+            font-size: 3.5rem;
             margin-bottom: 1rem;
         }
         .hero h2 {
-            font-size: 2rem;
+            font-size: 2.2rem;
             margin-bottom: 2rem;
         }
         .btn-container {
@@ -106,7 +111,7 @@
         .btn:hover {
             background: #FF8C00;
         }
-        .motivation, .features, .about-us, .countries {
+        .motivation, .features, .about-us, .recruitment-centers {
             padding: 4rem 0;
             text-align: center;
         }
@@ -119,19 +124,19 @@
             margin: auto;
             color: #00356B;
         }
-        .features h2, .about-us h2, .countries h2 {
+        .features h2, .about-us h2, .recruitment-centers h2 {
             font-size: 2.5rem;
             margin-bottom: 3rem;
             color: #00356B;
         }
-        .feature-grid, .country-grid {
+        .feature-grid, .recruitment-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
             gap: 2rem;
             width: 80%;
             margin: auto;
         }
-        .feature-item, .country-item {
+        .feature-item, .recruitment-item {
             background: #f9f9f9;
             padding: 2rem;
             border-radius: 10px;
@@ -139,28 +144,21 @@
             transition: all 0.3s ease;
             box-shadow: 0 5px 15px rgba(0,0,0,0.1);
         }
-        .feature-item:hover, .country-item:hover {
+        .feature-item:hover, .recruitment-item:hover {
             transform: translateY(-10px);
             box-shadow: 0 15px 30px rgba(0,0,0,0.2);
         }
-        .feature-icon {
+        .feature-icon, .country-icon {
             font-size: 3rem;
             margin-bottom: 1rem;
             color: #00356B;
         }
-        .feature-item h3, .country-item h3 {
+        .feature-item h3, .recruitment-item h3 {
             margin-bottom: 1rem;
             color: #00356B;
         }
         .about-us {
             background: #e9ecef;
-        }
-        .country-item img {
-            width: 100%;
-            height: 200px;
-            object-fit: cover;
-            border-radius: 10px;
-            margin-bottom: 1rem;
         }
         footer {
             background: #00356B;
@@ -185,7 +183,6 @@
     </div>
 
     <section class="hero">
-        <div class="hero-overlay"></div>
         <div class="hero-content">
             <h1>Work Horizon</h1>
             <h2>Agencija za zapošljavanje stranaca u Bosni i Hercegovini</h2>
@@ -234,23 +231,29 @@
         </div>
     </section>
 
-    <section class="countries">
-        <h2>Naši partneri</h2>
-        <div class="country-grid">
-            <div class="country-item">
-                <img src="india.jpg" alt="Indija">
+    <section class="recruitment-centers">
+        <h2>Regrutacijska sjedišta</h2>
+        <div class="recruitment-grid">
+            <div class="recruitment-item">
+                <div class="country-icon">
+                    <i class="fas fa-om"></i>
+                </div>
                 <h3>Indija</h3>
-                <p>Bogata kultura i stručna radna snaga u IT sektoru i inženjerstvu.</p>
+                <p>Zemlja bogata IT stručnjacima i inženjerima. Indijski radnici poznati su po svojoj stručnosti u tehnološkom sektoru, izvrsnom znanju engleskog jezika i prilagodljivosti različitim radnim okruženjima.</p>
             </div>
-            <div class="country-item">
-                <img src="philippines.jpg" alt="Filipini">
+            <div class="recruitment-item">
+                <div class="country-icon">
+                    <i class="fas fa-sun"></i>
+                </div>
                 <h3>Filipini</h3>
-                <p>Izvrsni stručnjaci u zdravstvu i uslužnim djelatnostima.</p>
+                <p>Filipinski radnici cijenjeni su zbog svoje profesionalnosti u zdravstvenom sektoru i uslužnim djelatnostima. Odlikuju se izvrsnim komunikacijskim vještinama i kulturnom prilagodljivošću.</p>
             </div>
-            <div class="country-item">
-                <img src="nepal.jpg" alt="Nepal">
+            <div class="recruitment-item">
+                <div class="country-icon">
+                    <i class="fas fa-mountain"></i>
+                </div>
                 <h3>Nepal</h3>
-                <p>Vrijedni radnici s iskustvom u ugostiteljstvu i građevinarstvu.</p>
+                <p>Nepalski radnici poznati su po svojoj marljivosti i pouzdanosti, posebno u sektorima ugostiteljstva i građevinarstva. Njihova radna etika i spremnost na učenje čine ih vrijednim članovima svakog tima.</p>
             </div>
         </div>
     </section>
