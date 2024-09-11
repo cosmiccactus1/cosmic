@@ -152,13 +152,13 @@
             margin-bottom: 1rem;
             color: #00356B;
         }
-        .about-us {
+        .about-contact {
             background: #fff;
         }
-        .about-content {
+        .about-contact-content {
             display: flex;
-            align-items: center;
             justify-content: space-between;
+            align-items: flex-start;
             flex-wrap: wrap;
         }
         .about-text {
@@ -166,28 +166,10 @@
             padding-right: 2rem;
             min-width: 300px;
         }
-        .about-image {
-            flex: 1;
-            text-align: center;
-            min-width: 300px;
-        }
-        .about-image img {
-            max-width: 400px;
-            border-radius: 50%;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
-            transition: transform 0.3s ease;
-        }
-        .about-image img:hover {
-            transform: scale(1.05);
-        }
-        .contact {
-            background: #00356B;
-            color: #fff;
-        }
         .contact-form {
-            max-width: 600px;
-            margin: 0 auto;
-            background: #fff;
+            flex: 1;
+            min-width: 300px;
+            background: #f9f9f9;
             padding: 2rem;
             border-radius: 10px;
             box-shadow: 0 5px 15px rgba(0,0,0,0.1);
@@ -223,8 +205,7 @@
                 <ul>
                     <li><a href="#home">Početna</a></li>
                     <li><a href="#characteristics">Karakteristike</a></li>
-                    <li><a href="#about">O nama</a></li>
-                    <li><a href="#contact">Kontakt</a></li>
+                    <li><a href="#about-contact">O nama i Kontakt</a></li>
                 </ul>
             </nav>
         </div>
@@ -235,8 +216,8 @@
         <div class="hero-content">
             <h1>Work Horizon</h1>
             <h2>Agencija za zapošljavanje stranaca u Bosni i Hercegovini</h2>
-            <p>Otključajte potencijal međunarodnog zapošljavanja</p>
-            <a href="#contact" class="btn">Kontaktirajte nas</a>
+            <p>Povezujemo poslodavce sa stručnim radnicima iz cijelog svijeta</p>
+            <a href="#about-contact" class="btn">Kontaktirajte nas</a>
         </div>
     </section>
 
@@ -255,8 +236,8 @@
                     <div class="char-icon">
                         <i class="fas fa-search"></i>
                     </div>
-                    <h3>Pronalazak kvalificirane radne snage</h3>
-                    <p>Naš stručni tim pronalazi i odabire najbolje kandidate koji odgovaraju vašim specifičnim potrebama.</p>
+                    <h3>Regrutacija stručnih radnika</h3>
+                    <p>Naš stručni tim pronalazi i odabire kvalificirane kandidate iz različitih branši koji odgovaraju vašim specifičnim potrebama.</p>
                 </div>
                 <div class="char-item">
                     <div class="char-icon">
@@ -270,50 +251,43 @@
                         <i class="fas fa-globe"></i>
                     </div>
                     <h3>Međunarodno umrežavanje</h3>
-                    <p>Naša široka mreža kontakata omogućava nam pristup talentima iz cijelog svijeta.</p>
+                    <p>Naša široka mreža kontakata omogućava nam pristup stručnim radnicima iz cijelog svijeta, pokrivajući razne industrije i zanimanja.</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <section class="about-us" id="about">
+    <section class="about-contact" id="about-contact">
         <div class="container">
-            <h2 class="section-title">O nama</h2>
-            <div class="about-content">
+            <h2 class="section-title">O nama i Kontakt</h2>
+            <div class="about-contact-content">
                 <div class="about-text">
-                    <p>Work Horizon je vodeća agencija za zapošljavanje stranaca u Bosni i Hercegovini. S dugogodišnjim iskustvom i stručnošću, posvećeni smo povezivanju međunarodnih talenata s najboljim poslovnim prilikama u BiH.</p>
+                    <h3>O nama</h3>
+                    <p>Work Horizon je vodeća agencija za zapošljavanje stranaca u Bosni i Hercegovini. S dugogodišnjim iskustvom i stručnošću, posvećeni smo povezivanju kvalificiranih stručnjaka iz različitih branši s najboljim poslovnim prilikama u BiH.</p>
                     <p>Naš tim iskusnih profesionalaca pruža sveobuhvatnu podršku kako poslodavcima tako i stranim radnicima, osiguravajući glatku integraciju i dugoročni uspjeh. Vjerujemo u stvaranje mostova između kultura i izgradnju snažne, raznolike radne snage u BiH.</p>
                 </div>
-                <div class="about-image">
-                    <img src="tim.jpg" alt="Naš tim" />
+                <div class="contact-form">
+                    <h3>Kontaktirajte nas</h3>
+                    <form action="#" method="POST">
+                        <div class="form-group">
+                            <label for="name">Ime:</label>
+                            <input type="text" id="name" name="name" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="surname">Prezime:</label>
+                            <input type="text" id="surname" name="surname" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email:</label>
+                            <input type="email" id="email" name="email" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="message">Vaše pitanje:</label>
+                            <textarea id="message" name="message" rows="5" required></textarea>
+                        </div>
+                        <button type="submit" class="btn">Pošalji</button>
+                    </form>
                 </div>
-            </div>
-        </div>
-    </section>
-
-    <section class="contact" id="contact">
-        <div class="container">
-            <h2 class="section-title">Kontaktirajte nas</h2>
-            <div class="contact-form">
-                <form action="#" method="POST">
-                    <div class="form-group">
-                        <label for="name">Ime:</label>
-                        <input type="text" id="name" name="name" required>
-                    </div>
-                    <div class="form-group">
-                        <label for="surname">Prezime:</label>
-                        <input type="text" id="surname" name="surname" required>
-                    </div>
-                    <div class="form-group">
-                        <label for="email">Email:</label>
-                        <input type="email" id="email" name="email" required>
-                    </div>
-                    <div class="form-group">
-                        <label for="message">Vaše pitanje:</label>
-                        <textarea id="message" name="message" rows="5" required></textarea>
-                    </div>
-                    <button type="submit" class="btn">Pošalji</button>
-                </form>
             </div>
         </div>
     </section>
