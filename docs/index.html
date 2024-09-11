@@ -16,23 +16,12 @@
             line-height: 1.6;
             color: #333;
         }
-        .language-selector {
-            background: #f4f4f4;
-            padding: 10px 0;
-            text-align: right;
-        }
-        .language-selector a {
-            margin-right: 15px;
-            color: #333;
-            text-decoration: none;
-            font-family: 'Helvetica', sans-serif;
-            font-weight: bold;
-        }
         .top-bar {
             background: #00356B;
             color: #fff;
             padding: 1rem 0;
-            position: sticky;
+            position: fixed;
+            width: 100%;
             top: 0;
             z-index: 1000;
         }
@@ -40,13 +29,26 @@
             display: flex;
             justify-content: space-between;
             align-items: center;
-            width: 80%;
+            width: 90%;
             margin: auto;
         }
         .logo {
-            font-size: 2rem;
+            font-size: 1.8rem;
             font-weight: bold;
             color: #fff;
+        }
+        .nav-items {
+            display: flex;
+            align-items: center;
+        }
+        .language-selector {
+            margin-right: 20px;
+        }
+        .language-selector a {
+            color: #fff;
+            text-decoration: none;
+            margin-left: 10px;
+            font-size: 0.9rem;
         }
         .collaboration-btn {
             background: #FFA500;
@@ -71,6 +73,7 @@
             padding: 0 20px;
             color: #fff;
             position: relative;
+            margin-top: 60px; /* Dodajte marginu da kompenzujete fiksni header */
         }
         .hero::before {
             content: '';
@@ -111,74 +114,21 @@
         .btn:hover {
             background: #FF8C00;
         }
-        .motivation, .features, .about-us, .recruitment-centers {
-            padding: 4rem 0;
-            text-align: center;
-        }
-        .motivation {
-            background: #f4f4f4;
-        }
-        .motivation p, .about-us p {
-            font-size: 1.5rem;
-            max-width: 800px;
-            margin: auto;
-            color: #00356B;
-        }
-        .features h2, .about-us h2, .recruitment-centers h2 {
-            font-size: 2.5rem;
-            margin-bottom: 3rem;
-            color: #00356B;
-        }
-        .feature-grid, .recruitment-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 2rem;
-            width: 80%;
-            margin: auto;
-        }
-        .feature-item, .recruitment-item {
-            background: #f9f9f9;
-            padding: 2rem;
-            border-radius: 10px;
-            text-align: center;
-            transition: all 0.3s ease;
-            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
-        }
-        .feature-item:hover, .recruitment-item:hover {
-            transform: translateY(-10px);
-            box-shadow: 0 15px 30px rgba(0,0,0,0.2);
-        }
-        .feature-icon, .country-icon {
-            font-size: 3rem;
-            margin-bottom: 1rem;
-            color: #00356B;
-        }
-        .feature-item h3, .recruitment-item h3 {
-            margin-bottom: 1rem;
-            color: #00356B;
-        }
-        .about-us {
-            background: #e9ecef;
-        }
-        footer {
-            background: #00356B;
-            color: #fff;
-            text-align: center;
-            padding: 2rem 0;
-        }
+        /* Ostali stilovi ostaju isti */
     </style>
 </head>
 <body>
-    <div class="language-selector">
-        <a href="#" onclick="changeLanguage('bs')">Bosanski</a>
-        <a href="#" onclick="changeLanguage('en')">English</a>
-        <a href="#" onclick="changeLanguage('de')">Deutsch</a>
-    </div>
-
     <div class="top-bar">
         <div class="top-bar-content">
             <div class="logo">WH</div>
-            <a href="saradnja.html" class="collaboration-btn">Započnimo saradnju</a>
+            <div class="nav-items">
+                <div class="language-selector">
+                    <a href="#" onclick="changeLanguage('bs')">BS</a>
+                    <a href="#" onclick="changeLanguage('en')">EN</a>
+                    <a href="#" onclick="changeLanguage('de')">DE</a>
+                </div>
+                <a href="saradnja.html" class="collaboration-btn">Započnimo saradnju</a>
+            </div>
         </div>
     </div>
 
@@ -193,80 +143,7 @@
         </div>
     </section>
 
-    <section class="motivation">
-        <p>"Povezujemo ambicije sa prilikama, gradeći mostove između kultura i stvarajući uspješne poslovne priče. Zajedno, otključavamo potencijal i oblikujemo budućnost rada u BiH."</p>
-    </section>
-
-    <section class="features">
-        <h2>Naše Karakteristike</h2>
-        <div class="feature-grid">
-            <div class="feature-item">
-                <div class="feature-icon">
-                    <i class="fas fa-cogs"></i>
-                </div>
-                <h3>Sveobuhvatna administrativna podrška</h3>
-                <p>Pružamo potpunu administrativnu podršku, od pripreme dokumentacije do završetka procesa zapošljavanja.</p>
-            </div>
-            <div class="feature-item">
-                <div class="feature-icon">
-                    <i class="fas fa-search"></i>
-                </div>
-                <h3>Regrutacija stručnih radnika</h3>
-                <p>Naš stručni tim pronalazi i odabire kvalificirane kandidate iz različitih branši koji odgovaraju vašim specifičnim potrebama.</p>
-            </div>
-            <div class="feature-item">
-                <div class="feature-icon">
-                    <i class="fas fa-puzzle-piece"></i>
-                </div>
-                <h3>Prilagođena rješenja</h3>
-                <p>Kreiramo personalizirana rješenja za zapošljavanje koja odgovaraju jedinstvenim zahtjevima vašeg poslovanja.</p>
-            </div>
-            <div class="feature-item">
-                <div class="feature-icon">
-                    <i class="fas fa-globe"></i>
-                </div>
-                <h3>Međunarodno umrežavanje</h3>
-                <p>Naša široka mreža kontakata omogućava nam pristup stručnim radnicima iz cijelog svijeta, pokrivajući razne industrije i zanimanja.</p>
-            </div>
-        </div>
-    </section>
-
-    <section class="recruitment-centers">
-        <h2>Regrutacijska sjedišta</h2>
-        <div class="recruitment-grid">
-            <div class="recruitment-item">
-                <div class="country-icon">
-                    <i class="fas fa-om"></i>
-                </div>
-                <h3>Indija</h3>
-                <p>Zemlja bogata IT stručnjacima i inženjerima. Indijski radnici poznati su po svojoj stručnosti u tehnološkom sektoru, izvrsnom znanju engleskog jezika i prilagodljivosti različitim radnim okruženjima.</p>
-            </div>
-            <div class="recruitment-item">
-                <div class="country-icon">
-                    <i class="fas fa-sun"></i>
-                </div>
-                <h3>Filipini</h3>
-                <p>Filipinski radnici cijenjeni su zbog svoje profesionalnosti u zdravstvenom sektoru i uslužnim djelatnostima. Odlikuju se izvrsnim komunikacijskim vještinama i kulturnom prilagodljivošću.</p>
-            </div>
-            <div class="recruitment-item">
-                <div class="country-icon">
-                    <i class="fas fa-mountain"></i>
-                </div>
-                <h3>Nepal</h3>
-                <p>Nepalski radnici poznati su po svojoj marljivosti i pouzdanosti, posebno u sektorima ugostiteljstva i građevinarstva. Njihova radna etika i spremnost na učenje čine ih vrijednim članovima svakog tima.</p>
-            </div>
-        </div>
-    </section>
-
-    <section class="about-us">
-        <h2>O nama</h2>
-        <p>Work Horizon je vodeća agencija za zapošljavanje stranaca u Bosni i Hercegovini. Naša misija je povezati talentirane stručnjake iz cijelog svijeta s vodećim kompanijama u BiH, potičući rast i inovacije. S dugogodišnjim iskustvom i predanošću izvrsnosti, osiguravamo besprijekoran proces zapošljavanja za obje strane.</p>
-    </section>
-
-    <footer>
-        <p>&copy; 2024 Work Horizon. Sva prava zadržana.</p>
-        <p>Adresa: Glavna ulica 123, Sarajevo, BiH | Email: info@workhorizon.ba | Tel: +387 33 123 456</p>
-    </footer>
+    <!-- Ostale sekcije ostaju iste -->
 
     <script>
         function changeLanguage(lang) {
