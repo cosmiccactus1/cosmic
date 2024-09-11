@@ -21,40 +21,6 @@
             margin: auto;
             overflow: hidden;
         }
-        header {
-            background: rgba(0, 53, 107, 0.9);
-            color: #fff;
-            padding: 1rem 0;
-            position: fixed;
-            width: 100%;
-            top: 0;
-            z-index: 1000;
-            transition: background 0.3s ease;
-        }
-        .logo {
-            float: left;
-            font-size: 1.5rem;
-            font-weight: bold;
-            color: #fff;
-        }
-        nav {
-            float: right;
-        }
-        nav ul {
-            list-style: none;
-        }
-        nav ul li {
-            display: inline;
-            margin-left: 20px;
-        }
-        nav ul li a {
-            color: #fff;
-            text-decoration: none;
-            transition: color 0.3s ease;
-        }
-        nav ul li a:hover {
-            color: #FFA500;
-        }
         .hero {
             background: url('radnik.jpg') no-repeat center center/cover;
             height: 100vh;
@@ -195,21 +161,32 @@
             text-align: center;
             padding: 1rem 0;
         }
+        .collaboration-banner {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            z-index: 1000;
+        }
+        .collaboration-banner a {
+            display: inline-block;
+            background: #FFA500;
+            color: #fff;
+            padding: 10px 20px;
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: bold;
+            transition: background 0.3s ease, transform 0.3s ease;
+        }
+        .collaboration-banner a:hover {
+            background: #FF8C00;
+            transform: scale(1.05);
+        }
     </style>
 </head>
 <body>
-    <header>
-        <div class="container">
-            <div class="logo">Work Horizon</div>
-            <nav>
-                <ul>
-                    <li><a href="#home">Početna</a></li>
-                    <li><a href="#characteristics">Karakteristike</a></li>
-                    <li><a href="#about-contact">O nama i Kontakt</a></li>
-                </ul>
-            </nav>
-        </div>
-    </header>
+    <div class="collaboration-banner">
+        <a href="saradnja.html">Započnimo saradnju</a>
+    </div>
 
     <section class="hero" id="home">
         <div class="hero-overlay"></div>
@@ -307,12 +284,6 @@
                     behavior: 'smooth'
                 });
             });
-        });
-
-        // Header animation on scroll
-        window.addEventListener('scroll', function() {
-            const header = document.querySelector('header');
-            header.style.background = window.scrollY > 50 ? 'rgba(0, 53, 107, 0.9)' : 'rgba(0, 53, 107, 0.7)';
         });
     </script>
 </body>
